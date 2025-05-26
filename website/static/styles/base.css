@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Glegoo:wght@400;700&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --primary: #b983ff;
+    --secondary: #94b3fd;
+    --accent: #94daff;
+    --bg-color: #fbf8ff;
+    --text-color: #1b1326;
+   
+}
+
+.dark-theme {
+    --bg-color: #1b1326;
+    --text-color: #fbf8ff;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: "Noto Sans", sans-serif;
+}
+nav {
+    display: grid;
+    grid-template-rows: auto 1fr;
+}
