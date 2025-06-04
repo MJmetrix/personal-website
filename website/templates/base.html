@@ -10,6 +10,10 @@
     </head>
     <body>
         <nav>
+            <div>
+                <a href="{% url 'home:index' %}">home</a>
+                <a href="{% url 'home:test' %}">test</a>
+            </div>
             <div class="nav-block-content">
                 {% block nav %}
                 {% endblock %}
