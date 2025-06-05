@@ -1,31 +1,134 @@
-@import url('https://fonts.googleapis.com/css2?family=Glegoo:wght@400;700&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Glegoo:wght@400;700&display=swap');
 
 :root {
-    --primary: #b983ff;
-    --secondary: #94b3fd;
-    --accent: #94daff;
-    --bg-color: #fbf8ff;
-    --text-color: #1b1326;
+    --bg-color: #312D2D;
+    --primary: #CEBBBB;
+    --secondary: #FFFFFF;
+    --accent: #A47162;
+    --text-color: #D9CFCF;
+
+    --font-text: 'Exo 2', sans-serif;
+    --font-heading: 'Glegoo', serif;
+
+    --h1-size: 0.7rem;
+    --h2-size: 0.52rem;
+    --h3-size: 0.28rem;
+    --logo-size: 0.32rem;
+    --p-size: 0.2rem;
+
+    --line-height-heading: 70px;
+
+    --h3-weight: 300;
+    --p-weight: 200;
+    --logo-weight: 600;
    
 }
 
-.dark-theme {
-    --bg-color: #1b1326;
-    --text-color: #fbf8ff;
-}
+/* General CSS Section */
 
 html, body {
+    font-size: 100px;
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    background-color: var(--bg-color);
+    background-color: var(--bg-color)
 }
+
 body {
-    font-family: "Noto Sans", sans-serif;
+    font-family: var(--font-text);
+    max-width: 1240px;
+    margin: 0 auto;
+    color: var(--primary);
 }
+
+h1, h2, h4, h5, h6 {
+    color: var(--secondary);
+    font-family: var(--font-heading);
+}
+
+h1 {
+    font-size: var(--h1-size);
+    line-height: var(--line-height-heading);
+}
+
+h2 {
+    font-size: var(--h2-size);
+}
+
+h3 {
+    font-size: var(--h3-size);
+    font-weight: var(--h3-weight);
+    line-height: var(--line-height-heading);
+}
+
+p {
+    font-size: var(--p-size);
+    font-weight: var(--p-weight);
+}
+
+a {
+    text-decoration: none;
+    font-size: var(--p-size);
+    color: var(--secondary);
+    font-family: var(--font-heading);
+    
+    transition: all 0.3s ease 0s;
+}
+
+a:hover {
+    color: var(--primary);
+}
+
+.test { 
+    display: flex;
+    flex-direction: column;
+    border: 8px solid black;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: space-evenly;
+    min-height: 800px;
+    /* for testing layouts */
+}
+
+/* Navigation Bar Section */
+
 nav {
-    display: grid;
-    grid-template-rows: auto 1fr;
+    
+    display: flex;
+    align-items: center;       
+    justify-content: space-between;
+    position: relative;   
+    margin-top: 0.5rem;     
+    padding: 0 16px;           
+    height: 60px;             
 }
+
+ul {
+    flex-direction: column;
+}
+
+#centered-logo
+{
+    font-family: var(--font-heading);
+    font-size: var(--logo-size);
+    font-weight: var(--logo-weight);
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+nav > div:first-child {
+    display: flex;
+    gap: 32px;
+
+}
+
+nav > div:first-child > a {
+    margin: 0;
+    padding: 0;
+    display: inline;
+}
+
 .nav-block-content {
     display: flex;
     justify-content: flex-start;
