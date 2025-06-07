@@ -1,5 +1,20 @@
 {% extends "base.html" %}
 {% load static %}
 {% block title %}Marcus Esteban{% endblock %}
+{% block head %}
+<link rel="stylesheet" href="{% static 'home/styles/home.css' %}">
+{% endblock %}
 {% block content %}
+<div id="hero-section">
+    <div class="hero-text">
+        <h1 class="alt-color">System.out.println <br><span>("Hello, World!");</span></h1>
+        <h3 class="path-text">/Users/<span>Marcus-Jet-Esteban</span>/Documents/Portfolio</h3>
+    </div>
+    <div>
+        <img id="hero-picture" src="{% static 'images/hero-picture.svg' %}" alt="My picture!">
+    </div>
+</div>
+<div id="desc-section">
+    <img class="divider" src="{% static 'images/divider.svg' %}">
+</div>
 {% endblock %}

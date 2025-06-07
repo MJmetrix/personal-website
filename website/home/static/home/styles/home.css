@@ -1,0 +1,28 @@
+
+#hero-section {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    margin-top: 103px;
+}
+
+.hero-text {
+    padding-top: 113px;
+}
+
+.hero-picture {
+    padding-left: 20px;
+    padding-top: 50px;
+}
+
+#hero-picture {
+    padding-left: 20px;
+    padding-top: 10px;
+}
+
+.path-text {
+    margin-top: -47px;
+}
+
+#desc-section {
+   text-align: center;
+}
