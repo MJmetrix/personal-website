@@ -1,9 +1,9 @@
-
 #hero-section {
     display: grid;
     position: relative;
     grid-template-columns: 60% 40%;
     margin-top: 103px;
+    animation: drop-animation 2s ease 0s 1 normal forwards;
 }
 
 .hero-designs {
@@ -12,6 +12,8 @@
     left: 0%;
     width: 100vw;
     overflow: hidden;
+    user-select: none;
+    pointer-events: none;
 }
 
 #hero-ellipse {
@@ -49,6 +51,8 @@
     padding-left: 20px;
     top: 0%;
     background: transparent;
+    user-select: none;
+    pointer-events: none;
 }
 
 .path-text {
@@ -58,5 +62,4 @@
 #desc-section {
    text-align: center;
    margin: 0 16vw;
-
 }

@@ -1,5 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Glegoo:wght@400;700&display=swap');
 
+@keyframes drop-animation {
+	0% {
+		opacity: 0;
+		transform: translateY(-30px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
 :root {
     --bg-color: #312D2D;
     --primary: #CEBBBB;
@@ -23,6 +35,10 @@
     --logo-weight: 600;
    
 }
+
+/* * {
+    outline: 1px solid red;
+  } */
 
 /* General CSS Section */
 
