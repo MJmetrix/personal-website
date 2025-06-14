@@ -6,26 +6,27 @@
 {% endblock %}
 {% block content %}
 <div class="hero-designs">
-    <img id="hero-rectangle" src="{% static 'images/hero-rectangle.svg' %}">
-    <img id="hero-element-1" src="{% static 'images/hero-element-1.svg' %}">
     <img id="hero-ellipse" src="{% static 'images/hero-ellipse.svg' %}">
 </div>
 <div id="hero-section">
-    <div class="hero-text">
-        <h1 class="alt-color">System.out.println <br><span>("Hello, World!");</span></h1>
+    <div class="hero-text" id="text-block">
+        <h1 class="alt-color" id="change-text">System.out.println <br><span>("Hello, World!");</span></h1>
         <h3 class="path-text">/Users/<span>Marcus-Jet-Esteban</span>/Documents/Portfolio</h3>
     </div>
     <div class="hero-picture">
         <img id="hero-profile" src="{% static 'images/hero-picture.svg' %}" alt="My picture!">
     </div>
-
 </div>
-<div id="desc-section">
+<div class="desc-section animate">
     <img class="divider" src="{% static 'images/divider.svg' %}">
     <h2 class="heading"><span>Aiming to Innovate</span></h2>
     <p>Marcus Jet Esteban is currently a sophomore student 
         taking Bachelors of Science in Computer Science at 
         Ateneo de Manila University</p>
+</div>
+<div class="container">
+    <h2>hi</h2>
+    <p>hello</p>
 </div>
 
 {% endblock %}

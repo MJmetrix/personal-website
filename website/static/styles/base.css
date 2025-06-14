@@ -22,11 +22,12 @@
     --font-text: 'Exo 2', sans-serif;
     --font-heading: 'Glegoo', serif;
 
-    --h1-size: 0.7rem;
-    --h2-size: 0.52rem;
-    --h3-size: 0.28rem;
-    --logo-size: 0.32rem;
-    --p-size: 0.2rem;
+    --h1-size: clamp(0.42rem, 5vw, 0.70rem);
+    --h2-size: clamp(0.312rem, 3.715vw, 0.52rem);
+    --h3-size: clamp(0.168rem, 2vw, 0.28rem);
+    --logo-size: clamp(0.192rem, 2.285vw, 0.32rem);
+    --p-size: clamp(0.12rem, 1.43vw, 0.20rem);
+
 
     --line-height-heading: 70px;
 
@@ -36,7 +37,7 @@
    
 }
 
-/* * {
+/* #hero-section {
     outline: 1px solid red;
   } */
 
@@ -51,10 +52,10 @@ html, body {
 }
 
 body {
-    min-height: 100vh;
+    width: min(100%, 1440px);
+    margin-inline: auto; 
+    padding-inline: clamp(0.5rem, 5vw, 3rem);
     font-family: var(--font-text);
-    max-width: 1240px;
-    margin: 0 auto;
     color: var(--primary);
 }
 
@@ -154,4 +155,15 @@ img.divider {
 svg * {
     user-select: none;
     pointer-events: none;
+}
+
+.container {
+    display: grid;
+    padding: min(5em, 8%);
+    margin: 0 auto;
+    width: 400px;
+    background-color: var(--accent);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+
 }
