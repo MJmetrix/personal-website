@@ -12,12 +12,24 @@
 	}
 }
 
+@keyframes star-animation {
+    from {
+        transform: translateY(0px);
+    }
+
+    to {
+        transform: translateY(-2000px);
+    }
+}
 :root {
-    --bg-color: #312D2D;
-    --primary: #CEBBBB;
+    --bg-color: #010b19;
+    --bg-color-2: 	#021631;
+    --primary: #a5c8f9;
     --secondary: #FFFFFF;
-    --accent: #A47162;
+    --accent: #05377b;
     --text-color: #D9CFCF;
+    --white-star: #fff;
+    --blue-star: #9cb0f0;
 
     --font-text: 'Exo 2', sans-serif;
     --font-heading: 'Glegoo', serif;
@@ -48,9 +60,26 @@ html, body {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    background-color: var(--bg-color)
+    background: radial-gradient(ellipse at top, var(--bg-color-2) 0%, var(--bg-color) 100%);
 }
 
+#stars {
+    width: 1px;
+    height: 1px;
+    background: transparent;
+    animation: star-animation 50s linear infinite;
+    
+}
+
+#stars:after {
+    content: '';
+    position: absolute;
+    top: 2000px;
+    width: 1px;
+    height: 1px;
+    background: transparent;
+   
+}
 body {
     width: min(100%, 1440px);
     margin-inline: auto; 

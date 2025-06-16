@@ -43,3 +43,37 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 500);
   }, 3000);
 });
+
+const numStars = 150; 
+const maxX = window.innerWidth;
+const maxY = 2000; 
+
+function getRandomColor() {
+  const colors = ['var(--white-star)', 'var(--blue-star)']; 
+  return colors[Math.floor(Math.random() * colors.length)];
+}
+
+function getRandomStar() {
+  const x = Math.floor(Math.random() * window.innerWidth);
+  const y = Math.floor(Math.random() * 2000);
+  const color = getRandomColor();
+  return `${x}px ${y}px ${color}`;
+}
+
+const starShadows = Array.from({ length: numStars }, getRandomStar).join(', ');
+
+const starsEl = document.getElementById('stars');
+starsEl.style.boxShadow = starShadows;
+
+const afterEl = document.createElement('style');
+afterEl.innerHTML = `
+  #stars::after {
+    content: '';
+    position: absolute;
+    top: ${maxY}px;
+    width: 1px;
+    height: 1px;
+    box-shadow: ${starShadows};
+  }
+`;
+document.head.appendChild(afterEl);
