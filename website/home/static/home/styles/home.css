@@ -1,13 +1,15 @@
 #hero-section {
     display: grid;
     position: relative;
-    grid-template-columns: 60% 40%;
+    grid-template-columns: 40% 60%;
     margin-top: 103px;
     animation: drop-animation 2s ease 0s 1 normal forwards;
     margin-bottom: 150px;
+    align-items: center;
     width: 100%;
     height: auto;
     object-fit: contain;
+    z-index: 0;
 }
 
 #text-block {
@@ -26,43 +28,6 @@
     transform: translateY(0);
   }
 
-.hero-designs {
-    position: absolute;
-    top: calc(-60vh);
-    left: 0%;
-    height: 100vh;
-    width: 100%;
-    user-select: none;
-    pointer-events: none;
-}
-
-#hero-ellipse {
-    position: absolute;
-    height: auto;
-    width: 100%;
-    object-fit: cover;
-    background: transparent;
-}
-
-@media (max-width: 1200px) {
-    #hero-ellipse {
-        top: 20vh;
-    }
-}
-
-@media (max-width: 768px) {
-    #hero-ellipse {
-        top: 40vh;
-    }
-}
-
-@media (max-width: 480px) {
-    #hero-ellipse {
-        top: 60vh;
-    }
-}
-
-
 .hero-text {
     position: relative;
     z-index: 0;
@@ -73,10 +38,14 @@
     height: 100%;
 }
 
+#name {
+    margin-bottom: 30px;
+}
+
 .hero-picture {
     position: relative;
     z-index: 0;
-    padding-left: 20px;
+    padding-right: 20px;
     top: 0;
     background: transparent;
     user-select: none;
@@ -86,11 +55,6 @@
     object-fit: cover;
     aspect-ratio: 1/1;
     display: flex;
-    justify-content: center;
-}
-
-.path-text {
-    margin-top: -47px;
 }
 
 .desc-section {

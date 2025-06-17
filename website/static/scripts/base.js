@@ -18,9 +18,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const heroText = document.getElementById("change-text");
 
   const messages = [
-    `System.out.println <br><span>("Hello, World!");</span>`,
-    `print<span>("Hello, World!")</span>`,
-    `&lt;h1&gt;<span>Hello, World!</span>&lt;/h1&gt;`
+    `System.out.<wbr>println<span>("Hello, World. I am");</span>`,
+    `print<span>("Hello, World. I am")</span>`,
+    `&lt;h1&gt;<span>Hello, World. I am</span>&lt;/h1&gt;`
   ];
 
   let index = 0;
@@ -44,9 +44,9 @@ document.addEventListener("DOMContentLoaded", () => {
   }, 3000);
 });
 
-const numStars = 150; 
-const maxX = window.innerWidth;
-const maxY = 2000; 
+const numStars = 500; 
+const maxX = window.innerWidth * 2;
+const maxY = window.innerHeight * 3;; 
 
 function getRandomColor() {
   const colors = ['var(--white-star)', 'var(--blue-star)']; 
@@ -54,8 +54,8 @@ function getRandomColor() {
 }
 
 function getRandomStar() {
-  const x = Math.floor(Math.random() * window.innerWidth);
-  const y = Math.floor(Math.random() * 2000);
+  const x = Math.floor(Math.random() * window.innerWidth * 2);
+  const y = Math.floor(Math.random() * window.innerHeight * 3);
   const color = getRandomColor();
   return `${x}px ${y}px ${color}`;
 }

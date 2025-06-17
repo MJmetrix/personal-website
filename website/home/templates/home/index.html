@@ -5,26 +5,30 @@
 <link rel="stylesheet" href="{% static 'home/styles/home.css' %}">
 {% endblock %}
 {% block content %}
-
 <div id="hero-section">
-    <div class="hero-text" id="text-block">
-        <h1 class="alt-color" id="change-text">System.out.println <br><span>("Hello, World!");</span></h1>
-        <h3 class="path-text">/Users/<span>Marcus-Jet-Esteban</span>/Documents/Portfolio</h3>
-    </div>
     <div class="hero-picture">
         <img id="hero-profile" src="{% static 'images/hero-picture.svg' %}" alt="My picture!">
+    </div>
+    <div class="hero-text">
+        <div id="text-block">
+            <h3 class="alt-color" id="change-text">System.out.println<span>("Hello, World. I am");</span></h3>
+        </div>
+        <h1 id="name"><span>Marcus Jet<wbr> Esteban</span></h1>
+        <img class="divider" src="{% static 'images/divider.svg' %}">
+        <p>A Filipino programmer currently taking Computer Science 
+            in Ateneo de Manila University. </p>
+        <h4 class="path-text">/Users/<span>Marcus-Jet-Esteban</span>/Documents/Portfolio</h4>
     </div>
 </div>
 <div class="desc-section animate">
     <img class="divider" src="{% static 'images/divider.svg' %}">
-    <h2 class="heading"><span>Aiming to Innovate</span></h2>
+    <h2 class="heading">Aiming to Innovate</h2>
     <p>Marcus Jet Esteban is currently a sophomore student 
         taking Bachelors of Science in Computer Science at 
         Ateneo de Manila University</p>
 </div>
-<div class="container">
+<!-- <div class="glass-container animate">
     <h2>hi</h2>
     <p>hello</p>
-</div>
-
+</div> -->
 {% endblock %}

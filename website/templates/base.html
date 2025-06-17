@@ -12,13 +12,15 @@
     <body>
         <header>
             <nav>
-                <div>
+                <div class="nav-buttons">
                     <a href="{% url 'home:index' %}">Home</a>
                     <a href="{% url 'home:test' %}">Test</a>
+                    <a href="{% url 'home:about_me' %}">About me</a>
                 </div>       
                 <div class="nav-block-content">
                     {% block nav %}
                     {% endblock %}
+                    <h2>m<span>je</span>.</h2>
                 </div>
             </nav>
         </header>
