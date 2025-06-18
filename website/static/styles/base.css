@@ -72,6 +72,7 @@ html, body {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    -webkit-font-smoothing: antialiased;
     background: radial-gradient(ellipse at top, var(--bg-color-2) 0%, var(--bg-color) 100%);
 }
 
@@ -244,8 +245,7 @@ nav > div:first-child > a {
 }
 
 img.divider {
-    max-width: 120px; /* Adjust as needed */
-    width: 100%;
+    width: clamp(30px, 7.9vw, 120px);
     user-select: none;
     pointer-events: none;
 }
@@ -287,4 +287,5 @@ svg * {
     border-radius: clamp(10px, 5vw, 45px);
     border: 1px solid rgba(var(--white-star-rgb), 0.20); /* supposed gradient border */
     overflow: hidden;
+    animation: drop-animation 2s ease 0s 1 normal forwards;
 }

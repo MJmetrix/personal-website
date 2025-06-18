@@ -2,7 +2,7 @@
     display: grid;
     position: relative;
     grid-template-columns: 40% 60%;
-    margin-top: 103px;
+    margin-top: 60px;
     animation: drop-animation 2s ease 0s 1 normal forwards;
     margin-bottom: 150px;
     align-items: center;
@@ -50,10 +50,10 @@
     background: transparent;
     user-select: none;
     pointer-events: none;
-    max-width: 100%;
+    max-width: 90%;
     overflow: hidden; 
     object-fit: cover;
-    aspect-ratio: 1/1;
+    aspect-ratio: 484/633;
     display: flex;
 }
 
