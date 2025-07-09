@@ -19,6 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const messages = [
     `System.out.<wbr>println<span>("Hello, World. I am");</span>`,
+    'console.log<span>("Hello, World. I am")</span>',
     `print<span>("Hello, World. I am")</span>`,
     `&lt;h1&gt;<span>Hello, World. I am</span>&lt;/h1&gt;`
   ];
@@ -77,3 +78,11 @@ afterEl.innerHTML = `
   }
 `;
 document.head.appendChild(afterEl);
+
+const cursorTag = document.querySelector('div.cursors')
+const ball = cursorTag.querySelector('div')
+
+document.addEventListener("mousemove", function(event) {
+  ball.style.left = event.pageX + "px"
+  ball.style.top = event.pageY + "px"
+})

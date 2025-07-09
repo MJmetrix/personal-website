@@ -14,8 +14,9 @@
             <nav>
                 <div class="nav-buttons">
                     <a href="{% url 'home:index' %}">Home</a>
-                    <a href="{% url 'home:test' %}">Test</a>
-                    <a href="{% url 'home:about_me' %}">About me</a>
+                    <a href="{% url 'home:about_me' %}">About</a>
+                    <a href="{% url 'home:test' %}">Work</a>
+                    <a href="{% url 'home:test' %}">Contact</a>
                 </div>       
                 <div class="nav-block-content">
                     {% block nav %}
@@ -28,8 +29,12 @@
             <div class="hero-designs">
                 <div id="stars"></div>
             </div>
+            <div class="scroll-progress-bar"></div>
             {% block content %}
             {% endblock %}
+            <div class="cursors">
+                <div></div>
+            </div>
         </main>
         <footer>
             <!-- Footer stuff goes here -->

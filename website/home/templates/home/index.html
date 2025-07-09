@@ -5,7 +5,7 @@
 <link rel="stylesheet" href="{% static 'home/styles/home.css' %}">
 {% endblock %}
 {% block content %}
-<div id="hero-section">
+<section class="hero-section">
     <div class="hero-picture">
         <img id="hero-profile" src="{% static 'images/hero-picture.svg' %}" alt="My picture!">
     </div>
@@ -17,18 +17,31 @@
         <img class="divider" src="{% static 'images/divider.svg' %}">
         <p>A Filipino programmer currently taking Computer Science 
             at Ateneo de Manila University. </p>
-        <h4 class="path-text">/Users/<span>Marcus-Jet-Esteban</span>/Documents/Portfolio</h4>
+        <a href="{% url 'home:test' %}" class="button">Let's collaborate</a>
     </div>
-</div>
-<div class="desc-section animate">
+</section>
+<section class="value-proposition-section">
+    <div class="value-proposition animate">
+        <img class="divider" src="{% static 'images/divider.svg' %}">
+        <h2 class="heading">Building solutions through leadership</h2>
+        <p>From a strong project management and programming background, 
+            I am a dedicated student leader capable of handling technical 
+            and operational processes in diverse working environments. 
+        </p>
+        <a href="{% url 'home:about_me' %}" class="button">Get to know me</a>
+    </div>
+    <div class="logo-carousel-group">
+        <div class="company-logos">
+            <img class="gdsc-logo" src="{% static 'images/logos/gdsc-logo.svg' %}">
+            
+
+        </div>
+        <!-- contains two logo carousels, one for my coding languages and  -->
+        <!-- the other for my organizations I worked for -->
+    </div>
+</section>
+<section class="projects-section">
     <img class="divider" src="{% static 'images/divider.svg' %}">
-    <h2 class="heading">Aiming to Innovate</h2>
-    <p>Marcus Jet Esteban is currently a sophomore student 
-        taking Bachelors of Science in Computer Science at 
-        Ateneo de Manila University</p>
-</div>
-<div class="glass-container animate">
-    <h2>hi</h2>
-    <p>hello</p>
-</div>
+    <h2 class="heading">Projects</h2>
+</section>
 {% endblock %}
