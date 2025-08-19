@@ -19,6 +19,14 @@ class Project(models.Model):
     link = models.TextField()
     category = models.ForeignKey(ProjectCategory, on_delete=models.SET_NULL, null=True, related_name="project_category")
     created_on = models.DateTimeField(auto_now_add=True)
+    STATUS_CHOICES = [
+        ('completed', 'Completed'),
+        ('ongoing', 'Ongoing'),
+    ]
+    status = models.CharField(max_length=20, choices=STATUS_CHOICES)
+
+    def __str__(self):
+            return self.title
 
     project_image = models.ImageField(upload_to='home/project_images/', blank=True, null=True)
 

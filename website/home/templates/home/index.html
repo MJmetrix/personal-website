@@ -56,5 +56,31 @@
 <section class="projects-section">
     <img class="divider" src="{% static 'images/divider.svg' %}">
     <h2 class="heading">Projects</h2>
+    {% for project in grouped_projects %}
+        <div class="projects-container">
+            <!-- TODO
+            -Include a button that contains the link
+            -Include a textbox for the description
+            -Include an H3 title for the project container
+            -Include tags for the project
+            -Include general date of project
+            -Include an image for the project -->
+            <div class="projects-text">
+                <h3 class="heading"> {{ project.title }}</h3>
+                <p class="tags">{{ project.category.name }}</p>
+                <p class="description"> {{ project.description }}</p>
+                <a href="{{ project.link }}" {% if project.status == 'ongoing' %}
+                disabled style="opacity: 0.5; cursor: not-allowed;"{% endif %} 
+                class="button">
+                Project Link
+                </a>
+            </div>
+            <div class="projects-image">
+                {% if project.project_image %}
+                    <img src="{{ project.project_image.url }}" alt="Project Image">
+                {% endif%}
+            </div>
+        </div>
+    {% endfor %}
 </section>
 {% endblock %}

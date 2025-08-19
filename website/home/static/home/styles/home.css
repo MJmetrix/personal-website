@@ -86,6 +86,7 @@ a.main-button:hover {
   position: relative;
   align-items: center;
   flex-direction: column-reverse;
+  padding-bottom: 0;
 
 }
 
@@ -191,13 +192,14 @@ a.circular-button:hover {
 }
 
 
-/* .value-proposition-section {
+.projects-container {
   display: grid;
   position: relative;
-  grid-template-columns: 55% 45%;
-  align-items: center;
+  align-items: stretch;
+  grid-template-columns: 60% 40%;
   width: 100%;
   height: auto;
+  max-height: clamp(1rem, 60vh  ,4.5rem);
   padding-bottom: 0;
   z-index: 1;
   background-color: transparent;
@@ -210,7 +212,27 @@ a.circular-button:hover {
   border-radius: clamp(10px, 3vw, 30px);
   border: 1px solid rgba(255, 255, 255, 0.05);
   overflow: hidden;
-} */
+  margin-top: 30px
+}
+
+.projects-text {
+  padding: 30px;
+}
+
+.description {
+  align-items: center;
+}
+.projects-image {
+  overflow: hidden;
+}
+
+.projects-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: inherit;
+}
 
 /* TODO:
 -used the old layout of the about me section for the projects section

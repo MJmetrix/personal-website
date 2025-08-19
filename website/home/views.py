@@ -3,12 +3,7 @@ from .models import Project, ProjectCategory
 
 
 def index(request):
-    projects = Project.objects.all().order_by('-created_on')
-    categories = ProjectCategory.objects.all().order_by('name')
-
-    grouped_projects = {
-        category: projects.filter(category=category) for category in categories
-    }
+    grouped_projects = Project.objects.all().order_by('-created_on')
     
     return render(request, "home/index.html", {
         'grouped_projects': grouped_projects
