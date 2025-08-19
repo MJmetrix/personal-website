@@ -38,6 +38,7 @@
     --text-color-black: #0b0b0c;
     --white-star: #fff;
     --blue-star: #9cb0f0;
+    --yellow-main-button: #f7c625;
 
     --bg-color-rgb: 1, 11, 25;
     --bg-color-2-rgb: 2, 22, 49;
@@ -47,12 +48,12 @@
     --text-color-rgb: 217, 207, 207;
     --white-star-rgb: 255, 255, 255;
     --blue-star-rgb: 156, 176, 240;
-
+    
     --font-text: 'Exo 2', sans-serif;
     --font-heading: 'Glegoo', serif;
 
     --h1-size: clamp(0.28rem, 5vw, 0.70rem);
-    --h2-size: clamp(0.22rem, 3.715vw, 0.52rem);
+    --h2-size: clamp(0.22rem, 3.715vw, 0.45rem);
     --h3-size: clamp(0.16rem, 2.4vw, 0.34rem);
     --h4-size: clamp(0.12rem, 1.5vw, 0.22rem);
     --h5-size: clamp(0.10rem, 1.2vw, 0.18rem);
@@ -377,3 +378,5 @@ a.button:hover {
     pointer-events: none;
     transform: translate(-50%, -50%);
 } */
+
+

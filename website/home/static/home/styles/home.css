@@ -57,12 +57,31 @@
     display: flex;
 }
 
+a.main-button {
+  display: inline-block;
+  z-index: 4;
+  backdrop-filter: blur(1px);
+  background-color: transparent;
+  width: fit-content;
+  font-weight: 600;
+  color: var(--bg-color);
+  background-color: var(--yellow-main-button);
+  padding: clamp(2px, 1.43vw ,14px);
+  border-radius: clamp(8px, 5vw, 30px);
+  box-shadow: 0 0 100px 2px rgba(247, 198, 37, 0.30);
+  transition: all 0.3s ease;
+}
+
+a.main-button:hover {
+  transform: scale(1.01);
+}
+
 .desc-section {
    text-align: center;
    margin: 0 16vw;
 }
 
-.value-proposition-section {
+/* .value-proposition-section {
   display: grid;
   position: relative;
   grid-template-columns: 55% 45%;
@@ -81,21 +100,47 @@
   border-radius: clamp(10px, 3vw, 30px);
   border: 1px solid rgba(255, 255, 255, 0.05);
   overflow: hidden;
+} */
+
+.value-proposition-section {
+  display: flex;
+  position: relative;
+  align-items: center;
+  flex-direction: column-reverse;
+
 }
 
+.value-proposition-section > .divider {
+  place-items: left;
+}
 .value-proposition {
   display: flex;
   padding: 40px;
   flex-direction: column;
+  align-items: center;
   justify-content: flex-start;
   /* background-color: var(--accent); */
 }
 
-.value-proposition > h2.heading {
-  margin-top: 10px;
+.value-proposition-description {
+  display: grid;
+  align-items: center;
+  grid-template-columns: auto auto;
+
 }
-.value-proposition > p {
+
+.heading {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: left;
+
+}
+
+.value-proposition-text {
+  padding-left: clamp(15px, 5vw, 50px);
   text-align: justify;
+
+
 }
 
 .logo-carousel-group {
@@ -112,3 +157,36 @@
 .desc-section.in-view {
     animation: drop-animation 2s ease 0s 1 normal forwards;
 }
+
+a.circular-button {
+  display: inline-block;
+  z-index: 4;
+  backdrop-filter: blur(1px);
+  background-color: transparent;
+  height:auto;
+  aspect-ratio: 1/1;
+
+  width: fit-content;
+  background-image: linear-gradient(
+      120deg,
+      rgba(var(--white-star-rgb), 0.25),
+      rgba(var(--blue-star-rgb), 0.36)
+  );
+  padding: clamp(2px, 1.43vw ,14px);
+  border-radius: 50%;
+  box-shadow: 0 0 100px 2px rgba(var(--blue-star-rgb), 0.50);
+  transition: all 0.3s ease;
+  display: grid;
+  place-items: center;
+}
+
+a.circular-button:hover {
+  transform: scale(1.01);
+}
+
+/* TODO:
+-Make an infinite carousel of the logos I worked with
+-Redo the layout of the about me section
+-used the old layout of the about me section for the projects section
+ */
+

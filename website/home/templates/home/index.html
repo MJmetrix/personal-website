@@ -17,28 +17,30 @@
         <img class="divider" src="{% static 'images/divider.svg' %}">
         <p>A Filipino programmer currently taking Computer Science 
             at Ateneo de Manila University. </p>
-        <a href="{% url 'home:test' %}" class="button">Let's collaborate</a>
+        <a href="{% url 'home:test' %}" class="main-button">Let's collaborate</a>
     </div>
 </section>
 <section class="value-proposition-section">
-    <div class="value-proposition animate">
-        <img class="divider" src="{% static 'images/divider.svg' %}">
-        <h2 class="heading">Building solutions through leadership</h2>
-        <p>From a strong project management and programming background, 
-            I am a dedicated student leader capable of handling technical 
-            and operational processes in diverse working environments. 
-        </p>
-        <a href="{% url 'home:about_me' %}" class="button">Get to know me</a>
-    </div>
     <div class="logo-carousel-group">
         <div class="company-logos">
             <img class="gdsc-logo" src="{% static 'images/logos/gdsc-logo.svg' %}">
-            
-
         </div>
         <!-- contains two logo carousels, one for my coding languages and  -->
         <!-- the other for my organizations I worked for -->
     </div>
+    <div class="value-proposition animate">
+        <div class="value-proposition-description">
+            <a href="{% url 'home:about_me' %}" class="circular-button">Get to know me</a>
+            <div class="value-proposition-text">
+                <h2 class="heading">Building solutions through leadership</h2>
+                <p class="alternate">From a strong project management and programming background, 
+                    I am a dedicated student leader capable of handling technical 
+                    and operational processes in diverse working environments. 
+                </p>
+            </div>
+        </div>
+    </div>
+    <img class="divider" src="{% static 'images/divider.svg' %}">
 </section>
 <section class="projects-section">
     <img class="divider" src="{% static 'images/divider.svg' %}">
