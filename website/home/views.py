@@ -1,9 +1,17 @@
 from django.shortcuts import render
+from .models import Project, ProjectCategory
 
 
 def index(request):
-    return render(request, "home/index.html", {
+    projects = Project.objects.all().order_by('-created_on')
+    categories = ProjectCategory.objects.all().order_by('name')
 
+    grouped_projects = {
+        category: projects.filter(category=category) for category in categories
+    }
+    
+    return render(request, "home/index.html", {
+        'grouped_projects': grouped_projects
     })
 
 def about_me(request):
