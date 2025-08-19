@@ -143,16 +143,43 @@ a.main-button:hover {
 
 }
 
-.logo-carousel-group {
-  padding: 20px;
-  text-align: center;
-  align-items: center;
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
 }
 
-.gdsc-logo {
-  width: 80%;
-  height: auto;
+.logo-carousel-container {
+  width: 100vw;
+  overflow: hidden;
+  position: relative;
+  white-space: nowrap;
+
 }
+
+.logo-carousel-group {
+  overflow: hidden;
+}
+
+.logo-carousel-group img {
+  padding: 20px;
+  overflow: hidden;
+  text-align: center;
+  align-items: center;
+  height: clamp(60px, 5vh, 100px);
+  width: auto;
+  margin: 0 50px;
+}
+
+.company-logos {
+  display: inline-block;
+  animation: 15s slide infinite linear;
+}
+
 
 .desc-section.in-view {
     animation: drop-animation 2s ease 0s 1 normal forwards;
