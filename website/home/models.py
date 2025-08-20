@@ -15,8 +15,8 @@ class ProjectTag(models.Model):
 
 class Project(models.Model):
     title = models.CharField(max_length=255)
-    description = models.TextField()
-    link = models.TextField(max_length=300)
+    description = models.TextField(max_length=160)
+    link = models.TextField()
     tags = models.ManyToManyField(ProjectTag, blank=True, related_name="project_tags")
     created_on = models.DateTimeField(auto_now_add=True)
     STATUS_CHOICES = [
