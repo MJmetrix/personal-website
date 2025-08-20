@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Project, ProjectCategory
+from .models import Project, ProjectTag
 
 
 def index(request):
@@ -16,5 +16,10 @@ def about_me(request):
 
 def test(request):
     return render(request, "home/test.html", {
+        
+    })
+
+def coming_soon(request):
+    return render(request, "home/coming_soon.html", {
         
     })

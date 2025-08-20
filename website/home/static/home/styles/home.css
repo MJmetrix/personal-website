@@ -146,13 +146,13 @@ a.main-button:hover {
 }
 
 .logo-carousel-group img {
-  padding: 50px;
+  padding: clamp(8px, 2.8vw, 25px);
   overflow: hidden;
   text-align: center;
   align-items: center;
-  height: clamp(60px, 5vh, 100px);
   width: auto;
-  margin: 0 50px;
+  height: clamp(40px, 6vw, 100px);
+  margin: 0 clamp(8px, 2.5vw, 30px);
 }
 
 .company-logos {
@@ -198,8 +198,7 @@ a.circular-button:hover {
   align-items: stretch;
   grid-template-columns: 60% 40%;
   width: 100%;
-  height: auto;
-  max-height: clamp(1rem, 60vh  ,4.5rem);
+  height: clamp(1.1rem, 42vw, 4.6rem);
   padding-bottom: 0;
   z-index: 1;
   background-color: transparent;
@@ -212,7 +211,13 @@ a.circular-button:hover {
   border-radius: clamp(10px, 3vw, 30px);
   border: 1px solid rgba(255, 255, 255, 0.05);
   overflow: hidden;
-  margin-top: 30px
+  margin-top: 30px;
+  transition: all 0.3s ease;
+}
+
+.projects-container:hover {
+  transform: scale(1.01);
+
 }
 
 .projects-text {
@@ -234,6 +239,26 @@ a.circular-button:hover {
   border-radius: inherit;
 }
 
+.tags-container {
+  display: flex;
+  align-items: center;
+}
+
+.tag {
+  font-family: var(--font-text);
+  padding: 6px;
+  margin-right: 8px;
+  background-color: var(--primary);
+  border-radius: clamp(3px, 2.1vw, 12px);
+  color: var(--accent);
+}
+
+.projects-container .button {
+  position: absolute;
+  bottom: .5rem; 
+  left: .25rem;  
+  bottom: clamp(0.25rem, 2.3vh, 1rem)
+}
 /* TODO:
 -used the old layout of the about me section for the projects section
  */

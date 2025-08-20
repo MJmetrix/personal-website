@@ -1,7 +1,7 @@
 from django.db import models
 from django.urls import reverse
 
-class ProjectCategory(models.Model):
+class ProjectTag(models.Model):
     name = models.CharField(max_length=100)
     description = models.TextField()
 
@@ -10,14 +10,14 @@ class ProjectCategory(models.Model):
 
     class Meta:
         ordering = ["name"]
-        verbose_name = "Project Category"
-        verbose_name_plural = "Project Categories"
+        verbose_name = "Project Tag"
+        verbose_name_plural = "Project Tags"
 
 class Project(models.Model):
     title = models.CharField(max_length=255)
     description = models.TextField()
-    link = models.TextField()
-    category = models.ForeignKey(ProjectCategory, on_delete=models.SET_NULL, null=True, related_name="project_category")
+    link = models.TextField(max_length=300)
+    tags = models.ManyToManyField(ProjectTag, blank=True, related_name="project_tags")
     created_on = models.DateTimeField(auto_now_add=True)
     STATUS_CHOICES = [
         ('completed', 'Completed'),
