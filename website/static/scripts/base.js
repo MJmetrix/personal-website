@@ -18,9 +18,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const heroText = document.getElementById("change-text");
 
   const messages = [
-    `System.out.<wbr>println<span>("Hello, World. I am");</span>`,
-    'console.log<span>("Hello, World. I am")</span>',
     `print<span>("Hello, World. I am")</span>`,
+    'console.log<span>("Hello, World. I am")</span>',
     `&lt;h1&gt;<span>Hello, World. I am</span>&lt;/h1&gt;`
   ];
 
