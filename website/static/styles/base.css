@@ -425,8 +425,10 @@ footer {
     padding: 10px 20px 0 20px;
 }
 
-.footer-explore-container > div > a {
-    display: inline-block;
+.footer-nav-buttons > div {
+    display: inline-flex;
+    width: fit-content;
+    height: auto;
 }
 
 .footer-nav-buttons  {
