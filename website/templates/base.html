@@ -37,6 +37,68 @@
             </div>
         </main>
         <footer>
+            <div class="footer-container">
+                <h3 class="text-logo">m<span>je</span>.</h3>
+                <div class="footer-grid-container">
+                    <div class="details-container">
+                        <div class="general-contacts-container">
+                            <h4>General Info</h4>
+
+                            <h4 class="text-alternate"><span>Rodriguez, Rizal, Philippines</span></h4>
+                            <h4 class="text-alternate"><span>marcus17esteban@gmail.com</span></h4>
+                            <!-- Includes name, address, email -->
+                        </div>
+                        <div class="socials-container">
+                            <div class="socials-group">
+                                <div>
+                                    <a href="https://www.linkedin.com/in/marcusesteban/" target="_blank" 
+                                    rel="noopener noreferrer"><img class="linkedin-logo" src="{% static 'images/logos/footer/linkedin.svg' %}"></a>
+                                </div>
+                                <div>
+                                    <a href="https://github.com/MJmetrix?tab=repositories" target="_blank" 
+                                    rel="noopener noreferrer"><img class="github-logo" 
+                                    src="{% static 'images/logos/footer/github.svg' %}"></a>
+                                </div>
+                                <div>
+                                    <a href="https://www.instagram.com/marcus_jet_esteban/" target="_blank" 
+                                    rel="noopener noreferrer"><img class="instagram-logo" 
+                                    src="{% static 'images/logos/footer/instagram.svg' %}"></a>
+                                </div>
+                                <div>
+                                    <a href="https://www.facebook.com/marcusjet.esteban" target="_blank" 
+                                    rel="noopener noreferrer"><img class="facebook-logo" 
+                                    src="{% static 'images/logos/footer/facebook.svg' %}"></a>
+                                </div>
+                            </div>
+                            <!-- Includes linkedIn, Github, Instagram, and Facebook -->
+                        </div>
+                    </div>
+                    <div class="footer-explore-container">
+                        <h4>Explore</h4>
+                        <div class="footer-nav-buttons">
+                            <a href="{% url 'home:index' %}">Home</a>
+                            <a href="{% url 'home:coming_soon' %}">About</a>
+                            <a href="{% url 'home:coming_soon' %}">Work</a>
+                            <a href="{% url 'home:coming_soon' %}">Contact</a>
+                        </div>
+                    </div>
+                </div>
+               
+                <div class="copyright-container">
+                    <div class="copyright-left">
+                        <h5 class="text-alternate">Made in Visual Studio Code using CSS, HTML, Python (Django), and JS.</h5>
+                        <h5 class="text-alternate">Designed in Figma</h5>
+                    </div>
+                    <div class="copyright-right">
+                        <h5 class="text-alternate">Marcus Jet Esteban @ 2025</h5>
+                    </div>
+                </div>
+            </div>  
+            <!-- TODO:
+            -Add simple contact information
+            -Add copyright notice
+            -links to github and whatnot
+            -general address -->
             <!-- Footer stuff goes here -->
         </footer>
         <script src="{% static 'scripts/base.js' %}"></script>

@@ -1,3 +1,6 @@
+
+/* Hero CSS section */
+
 .hero-section {
     display: grid;
     position: relative;
@@ -87,7 +90,6 @@ a.main-button:hover {
   align-items: center;
   flex-direction: column-reverse;
   padding-bottom: 0;
-
 }
 
 .value-proposition-section > .divider {
