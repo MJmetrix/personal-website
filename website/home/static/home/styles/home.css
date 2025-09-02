@@ -1,0 +1,266 @@
+
+/* Hero CSS section */
+
+.hero-section {
+    display: grid;
+    position: relative;
+    padding-top: clamp(30px, 6vh, 80px);
+    grid-template-columns: 40% 60%;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    z-index: 1;
+}
+
+#text-block {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+  
+  #text-block.fade-out {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  
+  #text-block.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+.hero-text {
+    position: relative;
+    opacity: 0;
+    animation: drop-animation 2s ease 0.5s 1 normal forwards;
+    z-index: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+#name {
+    margin-bottom: clamp(10px, 1vh ,30px);
+}
+
+.hero-picture {
+    position: relative;
+    animation: drop-animation 2s ease 0s 1 normal forwards;
+    z-index: 0;
+    padding-right: 40px;
+    top: 0;
+    background: transparent;
+    user-select: none;
+    pointer-events: none;
+    max-width: 90%;
+    overflow: hidden; 
+    object-fit: cover;
+    aspect-ratio: 484/633;
+    display: flex;
+}
+
+a.main-button {
+  display: inline-block;
+  z-index: 4;
+  backdrop-filter: blur(1px);
+  background-color: transparent;
+  width: fit-content;
+  font-weight: 600;
+  color: var(--bg-color);
+  background-color: var(--yellow-main-button);
+  padding: clamp(2px, 1.43vw ,14px);
+  border-radius: clamp(8px, 5vw, 30px);
+  box-shadow: 0 0 100px 2px rgba(247, 198, 37, 0.30);
+  transition: all 0.3s ease;
+}
+
+a.main-button:hover {
+  transform: scale(1.01);
+}
+
+.desc-section {
+   text-align: center;
+   margin: 0 16vw;
+}
+
+.value-proposition-section {
+  display: flex;
+  position: relative;
+  align-items: center;
+  flex-direction: column-reverse;
+  padding-bottom: 0;
+}
+
+.value-proposition-section > .divider {
+  place-items: left;
+}
+.value-proposition {
+  display: flex;
+  padding: 40px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  /* background-color: var(--accent); */
+}
+
+.value-proposition-description {
+  display: grid;
+  align-items: center;
+  grid-template-columns: auto auto;
+
+}
+
+.heading {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: left;
+
+}
+
+.value-proposition-text {
+  padding-left: clamp(15px, 5vw, 50px);
+  text-align: justify;
+
+
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-101.5%);
+  }
+}
+
+.logo-carousel-container {
+  width: 100vw;
+  overflow: hidden;
+  position: relative;
+  white-space: nowrap;
+
+}
+
+.logo-carousel-group {
+  overflow: hidden;
+}
+
+.logo-carousel-group img {
+  padding: clamp(8px, 2.8vw, 25px);
+  overflow: hidden;
+  text-align: center;
+  align-items: center;
+  width: auto;
+  height: clamp(40px, 6vw, 100px);
+  margin: 0 clamp(8px, 2.5vw, 30px);
+}
+
+.company-logos {
+  display: inline-block;
+  animation: 15s slide infinite linear;
+}
+
+
+.desc-section.in-view {
+    animation: drop-animation 2s ease 0s 1 normal forwards;
+}
+
+a.circular-button {
+  display: inline-block;
+  z-index: 4;
+  backdrop-filter: blur(1px);
+  background-color: transparent;
+  height:auto;
+  aspect-ratio: 1/1;
+
+  width: fit-content;
+  background-image: linear-gradient(
+      120deg,
+      rgba(var(--white-star-rgb), 0.25),
+      rgba(var(--blue-star-rgb), 0.36)
+  );
+  padding: clamp(2px, 1.43vw ,14px);
+  border-radius: 50%;
+  box-shadow: 0 0 100px 2px rgba(var(--blue-star-rgb), 0.50);
+  transition: all 0.3s ease;
+  display: grid;
+  place-items: center;
+}
+
+a.circular-button:hover {
+  transform: scale(1.01);
+}
+
+
+.projects-container {
+  display: grid;
+  position: relative;
+  align-items: stretch;
+  grid-template-columns: 60% 40%;
+  width: 100%;
+  height: clamp(1.1rem, 42vw, 4.6rem);
+  padding-bottom: 0;
+  z-index: 1;
+  background-color: transparent;
+  background-image: linear-gradient(
+      120deg,
+      rgba(var(--white-star-rgb), 0.05),
+      rgba(var(--blue-star-rgb), 0.05)
+  );
+  backdrop-filter: blur(1px);
+  border-radius: clamp(10px, 3vw, 30px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  overflow: hidden;
+  margin-top: 30px;
+  transition: all 0.3s ease;
+}
+
+.projects-container:hover {
+  transform: scale(1.01);
+}
+
+.projects-text {
+  padding: 30px;
+}
+
+.description {
+  align-items: center;
+}
+.projects-image {
+  overflow: hidden;
+}
+
+.projects-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: inherit;
+}
+
+.tags-container {
+  display: flex;
+  align-items: center;
+}
+
+.tag {
+  font-family: var(--font-text);
+  padding: 6px;
+  margin-right: 8px;
+  background-color: var(--primary);
+  border-radius: clamp(3px, 2.1vw, 12px);
+  color: var(--accent);
+}
+
+.projects-container .button {
+  position: absolute;
+  bottom: .5rem; 
+  left: .25rem;  
+  bottom: clamp(0.25rem, 2.3vh, 1rem)
+}
+/* TODO:
+-used the old layout of the about me section for the projects section
+ */
+

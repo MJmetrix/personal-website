@@ -1,0 +1,95 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Marcus Esteban{% endblock %}
+{% block head %}
+<link rel="stylesheet" href="{% static 'home/styles/home.css' %}">
+{% endblock %}
+{% block content %}
+<section class="hero-section">
+    <div class="hero-picture">
+        <img id="hero-profile" src="{% static 'images/hero-picture.svg' %}" alt="My picture!">
+    </div>
+    <div class="hero-text">
+        <div id="text-block">
+            <h3 class="alt-color" id="change-text">print<span>("Hello, World. I am")</span></h3>
+        </div>
+        <h1 id="name"><span>Marcus Jet<wbr> Esteban</span></h1>
+        <img class="divider" src="{% static 'images/divider.svg' %}">
+        <p>A Filipino programmer currently taking Computer Science 
+            at Ateneo de Manila University. </p>
+        <a href="{% url 'home:coming_soon' %}" class="main-button">Let's collaborate</a>
+    </div>
+</section>
+<section class="value-proposition-section">
+    <div class="logo-carousel-container">
+        <div class="logo-carousel-group">
+            <div class="company-logos">
+                <img class="gdsc-logo" src="{% static 'images/logos/gdsc-logo.svg' %}">
+                <img class="misa-logo" src="{% static 'images/logos/misa.svg' %}">
+                <img class="hinomoto-logo" src="{% static 'images/logos/hinomoto.svg' %}">
+                <img class="lions-logo" src="{% static 'images/logos/lions.svg' %}">
+                <img class="compsat-logo" src="{% static 'images/logos/compsat.svg' %}">
+            </div>
+            <div class="company-logos">
+                <img class="gdsc-logo" src="{% static 'images/logos/gdsc-logo.svg' %}">
+                <img class="misa-logo" src="{% static 'images/logos/misa.svg' %}">
+                <img class="hinomoto-logo" src="{% static 'images/logos/hinomoto.svg' %}">
+                <img class="lions-logo" src="{% static 'images/logos/lions.svg' %}">
+                <img class="compsat-logo" src="{% static 'images/logos/compsat.svg' %}">
+            </div>
+            <div class="company-logos">
+                <img class="gdsc-logo" src="{% static 'images/logos/gdsc-logo.svg' %}">
+                <img class="misa-logo" src="{% static 'images/logos/misa.svg' %}">
+                <img class="hinomoto-logo" src="{% static 'images/logos/hinomoto.svg' %}">
+                <img class="lions-logo" src="{% static 'images/logos/lions.svg' %}">
+                <img class="compsat-logo" src="{% static 'images/logos/compsat.svg' %}">
+            </div>
+        </div>
+    </div>
+    <div class="value-proposition animate">
+        <div class="value-proposition-description">
+            <a href="{% url 'home:coming_soon' %}" class="circular-button">Get to know me</a>
+            <div class="value-proposition-text">
+                <h2 class="heading">Building solutions through leadership</h2>
+                <p class="alternate">From a strong project management and programming background, 
+                    I am a dedicated student leader capable of handling technical 
+                    and operational processes in diverse working environments. 
+                </p>
+            </div>
+        </div>
+    </div>
+    <img class="divider" src="{% static 'images/divider.svg' %}">
+</section>
+<section class="projects-section">
+    <img class="divider" src="{% static 'images/divider.svg' %}">
+    <h2 class="heading">Projects</h2>
+    {% for project in grouped_projects %}
+        <div class="projects-container">
+            <!-- TODO
+            -Include tags for the project
+            -Include general date of project -->
+            <div class="projects-text">
+                <h3 class="heading"> {{ project.title }}</h3>
+                <div class="tags-container">
+                    {% for tag in project.tags.all %}
+                        <h6 class="tag">
+                            {{ tag.name }}
+                        </h6>
+                    {% endfor %}
+                </div>
+                <p class="description"> {{ project.description }}</p>
+                <a href="{{ project.link }}" {% if project.status == 'ongoing' %}
+                disabled style="opacity: 0.5; cursor: not-allowed;"{% endif %} 
+                class="button" target="_blank" rel="noopener noreferrer">
+                Project Link
+                </a>
+            </div>
+            <div class="projects-image">
+                {% if project.project_image %}
+                    <img src="{{ project.project_image.url }}" alt="Project Image">
+                {% endif%}
+            </div>
+        </div>
+    {% endfor %}
+</section>
+{% endblock %}
