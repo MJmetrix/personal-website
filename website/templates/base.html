@@ -1,5 +1,6 @@
 {% load static %}
 <!DOCTYPE html>
+<!-- note: deploy website on digital ocean -->
 <html lang="en">
     <head>
         <meta charset="UTF-8">
@@ -15,7 +16,7 @@
             <nav>
                 <div class="nav-buttons">
                     <a href="{% url 'home:index' %}">Home</a>
-                    <a href="{% url 'home:coming_soon' %}">About</a>
+                    <a href="{% url 'home:about_me' %}">About</a>
                     <a href="{% url 'home:coming_soon' %}">Work</a>
                     <a href="{% url 'home:coming_soon' %}">Contact</a>
                 </div>       
@@ -81,7 +82,7 @@
                                 <a href="{% url 'home:index' %}">Home</a>
                             </div>
                             <div>
-                                <a href="{% url 'home:coming_soon' %}">About</a>
+                                <a href="{% url 'home:about_me' %}">About</a>
                             </div>
                             <div>
                                 <a href="{% url 'home:coming_soon' %}">Work</a>

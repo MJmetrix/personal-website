@@ -3,6 +3,62 @@
 {% block title %}About Me{% endblock %}
 {% block head %}
 <link rel="stylesheet" href="{% static 'home/styles/home.css' %}">
+
 {% endblock %}
 {% block content %}
+<!-- TODO:
+-Add a compilation of pictures for the hero section (at least 3) and set it at the center
+-Put in a write up at the bottom of the pictures (a mini autobiography so to say) 
+-Include working history timeline (most likely organizations)
+-->
+<section class="introduction-section">
+    <div class="introduction-pictures-container">
+        <div class="introduction-pictures">
+            <div class="chewie">
+                <img id="chewie-picture" src="{% static 'images/about/chewie.svg' %}">
+            </div>
+            <div class="marcus-about">
+                <img id="marcus-about-picture" src="{% static 'images/about/marcus-about.svg' %}">
+            </div>
+            <div class="luna">
+                <img id="luna-picture" src="{% static 'images/about/luna.svg' %}">
+            </div>
+        </div>
+    </div>
+    <div class="write-up">
+        <h2 class="write-up-header"><span>Hi again! I am Marcus</span></h2>
+        <div class="write-up-text">
+            <div>
+                <p>
+                    I am a Computer Science student at Ateneo de Manila University, 
+                    aiming to explore careers that benefit people’s daily lives through 
+                    building software. I am taking specialized studies in enterprise systems 
+                    and financial management with the goal of building tools that automate the 
+                    technical processes of industries.  
+        
+                </p>
+            </div>
+            <div>
+                <p> 
+                    As a student, I have strong leadership and management skills in tech projects, 
+                    with strengths in communication, administrative duties, and technical expertise. 
+                    Currently, I am undergoing an internship at AHEAD Educational Group as an IT & Web 
+                    Maintenance Intern, further honing my technical skills in web development, using HTML, 
+                    CSS, and Python Django. 
+                </p>
+            </div>
+           <div>
+                <p>
+                    Outside of school, I enjoy outdoor activities, such as swimming and taking leisurely walks 
+                    with my pets. I also like reading light novels, manga, manhwa, and any other form of literature 
+                    during my free time.
+                </p>
+           </div>
+        </div>
+        <div class="resume-button">
+            <a href="{% url 'home:coming_soon' %}" class="main-button">Check my Resume!</a>
+        </div>
+
+    </div>
+</section>
 {% endblock %}

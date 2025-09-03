@@ -260,7 +260,61 @@ a.circular-button:hover {
   left: .25rem;  
   bottom: clamp(0.25rem, 2.3vh, 1rem)
 }
-/* TODO:
--used the old layout of the about me section for the projects section
- */
+
+/***********************************************************************/
+/* about-me page */
+/***********************************************************************/
+
+.write-up-header {
+  text-align: center;
+}
+
+.write-up-text {
+  display: flex;
+  margin: auto;
+  flex-direction: column;
+  width: min(100%, 980px);
+  text-align: justify;
+  align-items: center;
+  justify-content: center;
+}
+
+.introduction-pictures-container {
+  margin: auto;
+  transform: scale(0.8);
+}
+
+.introduction-pictures {
+  display: flex;
+  justify-content: center;
+  margin-left: -1rem;
+}
+.introduction-pictures div {
+  margin-right: -1rem;
+  width: fit-content;
+  z-index: 1;
+  left: 0;
+}
+
+.chewie {
+  opacity: 0;
+  animation: drop-animation 1s ease 0s 1 normal forwards;
+}
+
+.marcus-about {
+  opacity: 0;
+  animation: drop-animation 1s ease 0.2s 1 normal forwards;
+}
+
+.luna {
+  opacity: 0;
+  animation: drop-animation 1s ease 0.4s 1 normal forwards;
+}
+
+.resume-button {
+  display: flex;
+  margin-top: 16px;
+  align-items: center;
+  justify-content: center;
+}
 
