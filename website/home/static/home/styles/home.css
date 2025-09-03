@@ -281,6 +281,7 @@ a.circular-button:hover {
 
 .introduction-pictures-container {
   margin: auto;
+  max-width: 80%;
   transform: scale(0.8);
 }
 
@@ -299,16 +300,22 @@ a.circular-button:hover {
 .chewie {
   opacity: 0;
   animation: drop-animation 1s ease 0s 1 normal forwards;
+  width: 100%;
+  height: auto;
 }
 
 .marcus-about {
   opacity: 0;
   animation: drop-animation 1s ease 0.2s 1 normal forwards;
+  width: 100%;
+  height: auto;
 }
 
 .luna {
   opacity: 0;
   animation: drop-animation 1s ease 0.4s 1 normal forwards;
+  width: 100%;
+  height: auto;
 }
 
 .resume-button {
