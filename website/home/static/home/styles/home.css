@@ -297,6 +297,11 @@ a.circular-button:hover {
   left: 0;
 }
 
+.introduction-pictures > div > img {
+  display: block;
+  max-width: 100%;
+
+}
 .chewie {
   opacity: 0;
   animation: drop-animation 1s ease 0s 1 normal forwards;
