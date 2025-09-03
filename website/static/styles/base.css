@@ -308,11 +308,6 @@ img.divider {
     pointer-events: none;
 }
 
-img {
-    display: block;
-    max-width: 100%;
-}
-
 svg * {
     user-select: none;
     pointer-events: none;
