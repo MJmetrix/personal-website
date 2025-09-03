@@ -15,13 +15,25 @@
     <div class="introduction-pictures-container">
         <div class="introduction-pictures">
             <div class="chewie">
-                <img id="chewie-picture" src="{% static 'images/about/chewie.svg' %}">
+                <img class="chewie-picture" id="click-image-1" style="cursor: pointer;"
+                 src="{% static 'images/about/chewie.svg' %}"
+                 data-images='[
+                    "{% static "images/about/chewie.svg" %}",
+                    "{% static "images/about/biscuit.svg" %}",
+                    "{% static "images/about/peanut.svg" %}"
+                ]'>
             </div>
             <div class="marcus-about">
-                <img id="marcus-about-picture" src="{% static 'images/about/marcus-about.svg' %}">
+                <img class="marcus-about-picture" src="{% static 'images/about/marcus-about.svg' %}">
             </div>
             <div class="luna">
-                <img id="luna-picture" src="{% static 'images/about/luna.svg' %}">
+                <img class="luna-picture" id="click-image-2" style="cursor: pointer;" 
+                src="{% static 'images/about/luna.svg' %}"
+                data-images='[
+                    "{% static "images/about/luna.svg" %}",
+                    "{% static "images/about/raya.svg" %}",
+                    "{% static "images/about/luna.svg" %}"
+                ]'>
             </div>
         </div>
     </div>

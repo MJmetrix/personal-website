@@ -307,6 +307,15 @@ a.circular-button:hover {
   animation: drop-animation 1s ease 0s 1 normal forwards;
   width: 100%;
   height: auto;
+
+}
+
+.chewie img {
+  transition: all 0.3s ease;
+}
+
+.chewie:hover img {
+  transform: scale(1.01);
 }
 
 .marcus-about {
@@ -323,6 +332,13 @@ a.circular-button:hover {
   height: auto;
 }
 
+.luna img {
+  transition: all 0.3s ease;
+}
+
+.luna:hover img {
+  transform: scale(1.01);
+}
 .resume-button {
   display: flex;
   margin-top: 16px;
