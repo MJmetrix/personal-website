@@ -260,7 +260,131 @@ a.circular-button:hover {
   left: .25rem;  
   bottom: clamp(0.25rem, 2.3vh, 1rem)
 }
-/* TODO:
--used the old layout of the about me section for the projects section
- */
+
+/***********************************************************************/
+/* about-me page */
+/***********************************************************************/
+
+.write-up-header {
+  text-align: center;
+}
+
+.write-up-text {
+  display: flex;
+  margin: auto;
+  flex-direction: column;
+  width: min(100%, 980px);
+  text-align: justify;
+  align-items: center;
+  justify-content: center;
+}
+
+.introduction-pictures-container {
+  margin: auto;
+  max-width: 80%;
+  transform: scale(0.8);
+}
+
+.introduction-pictures {
+  display: flex;
+  justify-content: center;
+  margin-left: -1rem;
+}
+.introduction-pictures div {
+  margin-right: -1rem;
+  width: fit-content;
+  z-index: 1;
+  left: 0;
+}
+
+.introduction-pictures > div > img {
+  display: block;
+  max-width: 100%;
+
+}
+.chewie {
+  opacity: 0;
+  animation: drop-animation 1s ease 0s 1 normal forwards;
+  width: 100%;
+  height: auto;
+
+}
+
+.chewie img {
+  transition: all 0.3s ease;
+}
+
+.chewie:hover img {
+  transform: scale(1.01);
+}
+
+.marcus-about {
+  opacity: 0;
+  animation: drop-animation 1s ease 0.2s 1 normal forwards;
+  width: 100%;
+  height: auto;
+}
+
+.luna {
+  opacity: 0;
+  animation: drop-animation 1s ease 0.4s 1 normal forwards;
+  width: 100%;
+  height: auto;
+}
+
+.luna img {
+  transition: all 0.3s ease;
+}
+
+.luna:hover img {
+  transform: scale(1.01);
+}
+.resume-button {
+  display: flex;
+  margin-top: 16px;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Timeline Section */
+
+.timeline-section-divider {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.timeline-main-title {
+  margin-top: 20px;
+  text-align: center;
+}
+.timeline-container {
+  margin: auto;
+  width: min(100%, 1200px);
+}
+
+.timeline-group {
+  display: grid;
+  grid-template-columns: 17% 1fr;
+  
+}
+
+.timeline-date {
+  border-right: 4px solid var(--primary);
+  padding-right: 16px;
+}
+
+.timeline-year, .timeline-date {
+  text-align: right;
+}
+
+
+.timeline-description {
+  padding-left: 30px;
+  padding-bottom: 100px;
+}
+
+
 

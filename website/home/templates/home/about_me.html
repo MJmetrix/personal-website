@@ -3,6 +3,106 @@
 {% block title %}About Me{% endblock %}
 {% block head %}
 <link rel="stylesheet" href="{% static 'home/styles/home.css' %}">
+
 {% endblock %}
 {% block content %}
+<!-- TODO:
+-Include working history timeline (most likely organizations)
+-->
+<section class="introduction-section">
+    <div class="introduction-pictures-container">
+        <div class="introduction-pictures">
+            <div class="chewie">
+                <img class="chewie-picture" id="click-image-1" style="cursor: pointer;"
+                 src="{% static 'images/about/chewie.svg' %}"
+                 data-images='[
+                    "{% static "images/about/chewie.svg" %}",
+                    "{% static "images/about/biscuit.svg" %}",
+                    "{% static "images/about/peanut.svg" %}"
+                ]'>
+            </div>
+            <div class="marcus-about">
+                <img class="marcus-about-picture" src="{% static 'images/about/marcus-about.svg' %}">
+            </div>
+            <div class="luna">
+                <img class="luna-picture" id="click-image-2" style="cursor: pointer;" 
+                src="{% static 'images/about/luna.svg' %}"
+                data-images='[
+                    "{% static "images/about/luna.svg" %}",
+                    "{% static "images/about/raya.svg" %}"
+                ]'>
+            </div>
+        </div>
+    </div>
+    <div class="write-up">
+        <h2 class="write-up-header"><span>Hi again! I am Marcus</span></h2>
+        <div class="write-up-text">
+            <div>
+                <p>
+                    I am a Computer Science student at Ateneo de Manila University, 
+                    aiming to explore careers that benefit people’s daily lives through 
+                    building software. I am taking specialized studies in enterprise systems 
+                    and financial management with the goal of building tools that automate the 
+                    technical processes of industries.  
+        
+                </p>
+            </div>
+            <div>
+                <p> 
+                    As a student, I have strong leadership and management skills in tech projects, 
+                    with strengths in communication, administrative duties, and technical expertise. 
+                    Currently, I am undergoing an internship at AHEAD Educational Group as an IT & Web 
+                    Maintenance Intern, further honing my technical skills in web development, using HTML, 
+                    CSS, and Python Django. 
+                </p>
+            </div>
+           <div>
+                <p>
+                    Outside of school, I enjoy outdoor activities, such as swimming and taking leisurely walks 
+                    with my pets. I also like reading light novels, manga, manhwa, and any other form of literature 
+                    during my free time.
+                </p>
+           </div>
+        </div>
+        <div class="resume-button">
+            <a href="https://www.canva.com/design/DAGGZ91_xBo/tjNVUtT0PeNXNAmVBV8Mmg/view?utm_content=DAGGZ91_xBo&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h8d7b289e6d"
+            target="_blank" rel="noopener noreferrer" class="main-button">Check my Resume!</a>
+        </div>
+    </div>
+</section>
+<section class="timeline-section">
+    <!-- TODO
+    Make a django instance of a timeline, which includes:
+        -Starting year of the position
+        -Starting month of the position
+        -Title name of role
+        -Short description of the position
+
+        -NOTE: Every succeeding iteration of a django instance alternates positions from the 
+        left side of the timeline line to the right side of the timeline line
+        
+    
+    Add in a timeline line that extends depending on the amount of instances in the timeline
+        -4px width, height depending on the amount of django instance
+    -->
+    <div class="timeline-section-divider">
+        <img class="divider" src="{% static 'images/divider.svg' %}">
+        <h2 class="timeline-main-title">My Timeline</h2>
+    </div>
+    <br>
+    <div class="timeline-container">
+        {% for timeline_section in timeline_sections %}
+            <div class="timeline-group">
+                <div class="timeline-date">
+                    <h5 class="timeline-year">{{ timeline_section.year }}</h5>
+                    <h5 class="timeline-month">{{ timeline_section.month }}</h5>
+                </div>
+                <div class="timeline-description">
+                    <h5 class="timeline-title">{{ timeline_section.timeline_title }}</h5>
+                    <p class="timeline-text">{{ timeline_section.timeline_description }}</p>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</section>
 {% endblock %}

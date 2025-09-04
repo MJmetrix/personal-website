@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Project, ProjectTag
+from .models import Project, ProjectTag, Timeline
 
 
 def index(request):
@@ -10,8 +10,10 @@ def index(request):
     })
 
 def about_me(request):
+    timeline_sections = Timeline.objects.all().order_by('-year').order_by('-updated_on')
+    # Starts with highest year, then updated the latest
     return render(request, "home/about_me.html", {
-
+        'timeline_sections': timeline_sections
     })
 
 def test(request):
