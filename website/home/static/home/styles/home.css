@@ -367,7 +367,7 @@ a.circular-button:hover {
 
 .timeline-group {
   display: grid;
-  grid-template-columns: 15% 1fr;
+  grid-template-columns: 17% 1fr;
   
 }
 
@@ -383,6 +383,7 @@ a.circular-button:hover {
 
 .timeline-description {
   padding-left: 30px;
+  padding-bottom: 100px;
 }
 
 

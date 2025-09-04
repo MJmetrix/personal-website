@@ -37,10 +37,11 @@ class Project(models.Model):
 
 class Timeline(models.Model):
     year = models.CharField(max_length=5)
-    month = models.CharField(max_length=8)
+    month = models.CharField(max_length=10)
     timeline_title = models.CharField(max_length=80)
     timeline_description = models.CharField(max_length=160)
     created_on = models.DateTimeField(auto_now_add=True)
+    updated_on = models.DateTimeField(auto_now=True)
 
     def __str__(self):
         return self.timeline_title
@@ -48,5 +49,5 @@ class Timeline(models.Model):
     class Meta:
         verbose_name = 'Timeline'
         verbose_name_plural = 'Timelines'
-        ordering = ["created_on"]
+        ordering = ["updated_on"]
 

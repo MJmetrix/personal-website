@@ -21,7 +21,7 @@ class ProjectAdmin(admin.ModelAdmin):
 
 class TimelineAdmin(admin.ModelAdmin):
     model = Timeline
-    list_display = ('year', 'month', 'timeline_title', 'timeline_description', 'created_on',)
+    list_display = ('year', 'month', 'timeline_title', 'timeline_description', 'created_on', 'updated_on')
     list_filter = ('created_on',)
     search_fields = ('timeline_title',)
 
