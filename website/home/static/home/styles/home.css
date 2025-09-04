@@ -346,3 +346,44 @@ a.circular-button:hover {
   justify-content: center;
 }
 
+/* Timeline Section */
+
+.timeline-section-divider {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.timeline-main-title {
+  margin-top: 20px;
+  text-align: center;
+}
+.timeline-container {
+  margin: auto;
+  width: min(100%, 1200px);
+}
+
+.timeline-group {
+  display: grid;
+  grid-template-columns: 15% 1fr;
+  
+}
+
+.timeline-date {
+  border-right: 4px solid var(--primary);
+  padding-right: 16px;
+}
+
+.timeline-year, .timeline-date {
+  text-align: right;
+}
+
+
+.timeline-description {
+  padding-left: 30px;
+}
+
+
+
