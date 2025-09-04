@@ -362,8 +362,10 @@ a.circular-button:hover {
 }
 
 .timeline-container {
+  position: relative;
   margin: auto;
   width: min(100%, 1200px);
+  z-index: 1;
 }
 
 .timeline-group {
