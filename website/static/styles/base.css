@@ -456,7 +456,7 @@ footer {
     left: 300px;
     width: 16px;
     height: 16px;
-    background-color: var(--accent);
+    background-color: var(--yellow-main-button);
     border-radius: 50%;
     z-index: 10000;
     pointer-events: none;
