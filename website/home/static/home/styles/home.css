@@ -360,6 +360,7 @@ a.circular-button:hover {
   margin-top: 20px;
   text-align: center;
 }
+
 .timeline-container {
   margin: auto;
   width: min(100%, 1200px);
@@ -367,22 +368,35 @@ a.circular-button:hover {
 
 .timeline-group {
   display: grid;
-  grid-template-columns: 17% 1fr;
-  
+  grid-template-columns: 1fr 1fr;
 }
 
-.timeline-date {
+.timeline-left {
   border-right: 4px solid var(--primary);
-  padding-right: 16px;
-}
-
-.timeline-year, .timeline-date {
+  padding-right: 32px;
   text-align: right;
 }
 
+.timeline-dot-container {
+  display: flex;
+  align-items: right;
+  justify-content: right;
+
+}
+.timeline-dot {
+  position: absolute;
+  transform: translate(44px, -1px);
+  background-color: var(--primary);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+.timeline-right {
+  padding-left: 32px;
+  text-align: left;
+}
 
 .timeline-description {
-  padding-left: 30px;
   padding-bottom: 100px;
 }
 
