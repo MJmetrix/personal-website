@@ -78,6 +78,8 @@ afterEl.innerHTML = `
 `;
 document.head.appendChild(afterEl);
 
+// TODO:
+// Implement a responsive cursor tag
 const cursorTag = document.querySelector('div.cursors')
 const ball = cursorTag.querySelector('div')
 
