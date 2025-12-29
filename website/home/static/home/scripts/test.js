@@ -50,7 +50,6 @@ const subjectsWithA = grades.filter(function(grade) {
 
 console.log(subjectsWithA);
 
-
 const containerTest = document.querySelector('.container-test');
 
 containerTest.lastElementChild.remove();
@@ -65,8 +64,10 @@ button.addEventListener('click', (e) => {
     e.preventDefault();
     if(button.style.background != 'red') {
         button.style.background = 'red';
+        button.textContent = 'Ich bin red';
     }
     else {
         button.style.background = 'var(--yellow-main-button)';
+        button.textContent = 'Ich bin yellow';
     }
 })
