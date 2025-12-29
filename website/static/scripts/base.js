@@ -78,34 +78,41 @@ afterEl.innerHTML = `
 `;
 document.head.appendChild(afterEl);
 
-const cursorTag = document.querySelector('div.cursors')
-const ball = cursorTag.querySelector('div')
 
-document.addEventListener("mousemove", function(event) {
-  ball.style.left = event.pageX + "px"
-  ball.style.top = event.pageY + "px"
-})
+// const cursorTag = document.querySelector('div.cursors')
+// const ball = cursorTag.querySelector('div')
+// let ballYlocation = 0;
 
-const img = document.getElementById("click-image-1");
+// document.addEventListener("mouseleave", (e) => {
+//   ball.style.visibility = 'hidden'
+// })
 
-const images = JSON.parse(img.dataset.images);
+// document.addEventListener("mouseenter", (e) => {
+//   ball.style.visibility = 'visible'
+// })
 
-let currentIndex = 0;
+// document.addEventListener("mousemove", function(event) {
+//   ball.style.left = event.pageX + 20 + "px"
+//   ball.style.top = event.pageY - 20 + "px"
+//   ballYlocation = event.clientY - 20
+// })
 
-img.addEventListener("click", () => {
-  // Move to next image
-  currentIndex = (currentIndex + 1) % images.length;
-  img.src = images[currentIndex];
-});
+// document.addEventListener("scroll" , () => {
+//   ball.style.top = (ballYlocation + window.scrollY) + "px"
+// })
 
-const img2 = document.getElementById("click-image-2");
+function ImageIterator(imageName) {
+  const img = document.getElementById(imageName);
 
-const images2 = JSON.parse(img2.dataset.images);
+  const images = JSON.parse(img.dataset.images);
+  
+  let currentIndex = 0;
+  
+  img.addEventListener("click", () => {
+    currentIndex = (currentIndex + 1) % images.length;
+    img.src = images[currentIndex];
+  });
+}
 
-let currentIndex2 = 0;
-
-img2.addEventListener("click", () => {
-  // Move to next image
-  currentIndex2 = (currentIndex2 + 1) % images2.length;
-  img2.src = images2[currentIndex2];
-});
+ImageIterator("click-image-1");
+ImageIterator("click-image-2");
